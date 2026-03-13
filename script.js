@@ -1,7 +1,23 @@
 // Complete the js code
-function Car(make, model) {}
-
-function SportsCar(make, model, topSpeed) {}
+class Car{
+	constructor(make, model){
+		this.make = make;
+		this.model = model;
+	}
+	getMakeModel(){
+		return `${make} ${model}`;
+	}
+}
+class SportsCar extends Car{
+	constructor(make, model, topSpeed){
+		super(make);
+		super(model);
+		this.topSpeed = topSpeed; 
+	}
+	getTopSpeed(){
+		return `Top speed is ${topSpeed}`
+	}
+}
 
 // Do not change the code below
 window.Car = Car;
